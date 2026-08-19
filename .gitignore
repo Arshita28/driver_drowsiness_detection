@@ -1,0 +1,21 @@
+# Large model files
+shape_predictor_68_face_landmarks.dat
+*.dat
+
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# OS/Editor junk
+.DS_Store
+.vscode/
+*.swp
+
+# Optional: uncomment if you don't want sample media tracked either
+# images/
+# audio/
