@@ -1,0 +1,40 @@
+DriveAware - RUN THIS WEBSITE LOCALLY
+===================================
+
+1. Right-click DriveAware-Share.zip and choose Extract All.
+   Do not run files from inside the ZIP.
+2. Install Node.js (LTS) from https://nodejs.org if it is not already installed.
+3. Open VS Code. Choose File > Open Folder, then select the extracted
+   DriveAware-Share folder (the one containing package.json and server.cjs).
+4. Choose Terminal > New Terminal and run:
+
+   node server.cjs
+
+   Alternatively, run: npm start
+   No npm install or Python packages are required.
+5. Open http://localhost:8000 in Chrome or Edge.
+6. Click Start webcam and allow camera access. Face the camera in good light.
+   The site processes camera frames locally. It does not upload the video.
+7. Loud alerts are enabled by default. Use Test loud alarm to check your audio.
+   Turn up device volume as needed. A sustained eye closure or yawn triggers
+   repeated beeps; recovery clears the corresponding alert.
+8. Keep the terminal open while using the site. Ctrl+C stops the server.
+
+VS CODE TASK OPTION
+Terminal > Run Task > Start DriveAware also starts the server.
+
+ALTERNATIVE WITHOUT NODE
+If Python is already installed, run this instead from the extracted folder:
+   python -m http.server 8000 --bind 127.0.0.1
+On Windows you can also try:
+   py -m http.server 8000 --bind 127.0.0.1
+Then open http://localhost:8000.
+
+IMPORTANT
+- Internet access is needed to download MediaPipe and its face landmark model.
+- Do not just double-click index.html: use the local server above.
+- Use Chrome or Edge directly if an embedded preview cannot access the camera.
+- Close other applications using the camera if it says the webcam is busy.
+- The Python setup shown in the website's lower section describes the separate
+  original desktop repository. It is NOT needed to run this browser website.
+- This is a college project prototype, not a certified vehicle safety system.
