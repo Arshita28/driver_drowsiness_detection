@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: driveaware-driver-detection
+    runtime: static
+    buildCommand: echo "Static site ready"
+    staticPublishPath: ./website
