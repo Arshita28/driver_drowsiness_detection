@@ -22,5 +22,4 @@ $('quickSettings').onclick=()=>{$('settingsButton').click();$('settings').scroll
 let testTimer; $('testAlarm').onclick=()=>{alarm.unlock();if($('testAlarm').dataset.testing){clearTimeout(testTimer);endTest();return}alarm.start();$('testAlarm').dataset.testing='yes';$('testAlarm').innerHTML='<span>□</span>Stop alarm test';testTimer=setTimeout(endTest,2500)};
 function endTest(){delete $('testAlarm').dataset.testing;$('testAlarm').innerHTML='<span>♬</span>Test loud alarm';syncAlarm()}
 $('settingsButton').onclick=()=>{const open=$('settings').hidden;$('settings').hidden=!open;$('settingsButton').setAttribute('aria-expanded',String(open))};
-$('copy').onclick=async()=>{try{await navigator.clipboard.writeText($('commands').textContent);$('copy').textContent='Copied';setTimeout(()=>$('copy').textContent='Copy commands',2000)}catch{$('copy').textContent='Select commands to copy'}};
 window.addEventListener('pagehide',()=>{release();audio?.close();model?.close()});clearSignals();status('Ready · start your webcam');
